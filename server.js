@@ -8,7 +8,7 @@ const dbConnect = require("./config/database");
 //importing the routes
 const clriRouter = require("./routes/clriRoutes");
 const cbfRouter = require("./routes/cbfRoute");
-
+const machineHealthRouter = require("./routes/machineHealthRoutes");
 
 //creating the express app
 const app = express();
@@ -26,7 +26,8 @@ app.use(express.json());
 
 // mount the routes
 app.use("/clri" , clriRouter);
-app.use("/cbf" , cbfRouter); 
+app.use("/cbf" , cbfRouter);
+app.use("/machine-health" , machineHealthRouter); 
 
 
 
